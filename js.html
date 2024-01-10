@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+       <div class="userName">
+           <label for="name">Name:</label>
+           <input type="text" id="name" name="name" placeholder="FULLNAME" required>
+       </div>
+       <div class="userPhone">
+           <label for="phone">Phone Number:</label>
+           <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+       </div>
+       <div class="userEmail">
+           <label for="email">Email:</label>
+           <input type="email" id="email" name="email" placeholder="ABC@XYZ.COM" required>
+       </div>
+       <div class="dropDown">
+           <label for="needed_service">Needed Services*</label>
+           <select id="needed_service" name="needed_service">
+               <option value="Please-Choose">Please Choose</option>
+               <option value="eCommerce-Business">eCommerce Business</option>
+               <option value="ui_ux">UI/UX Design</option>
+               <option value="online_services">Online Services</option>
+           </select>
+       </div>
+       <div class="radioList">
+           <label>WHAT TYPE OF PRODUCTS DO YOU SELL?</label>
+           <div class="prod_container">
+               <div class="radio-btn">
+                   <input type="radio" id="prod_Physical" name="prod" value="prod_Physical" checked>
+                   <label for="prod_Physical">Physical Product</label>
+               </div>
+               <div class="radio-btn">
+                   <input type="radio" id="prod_Digital" name="prod" value="prod_Digital">
+                   <label for="prod_Digital">Digital Product</label>
+               </div>
+               <div class="radio-btn">
+                   <input type="radio" id="prod_consulting" name="prod" value="prod_consulting">
+                   <label for="prod_consulting">Service Consulting</label>
+               </div>
+           </div>
+       </div>
+       <div class="range-container">
+            <label for="range">Budget</label>
+       </div>
+       <div class="txtArea">
+           <label for="message">Message:</label>
+           <textarea id="message" name="message" rows="7" placeholder="Message.." required></textarea>
+       </div>
+        <div class="error-message" id="error-message"></div>
+
+        <button type="button" id="btn" onclick="validateForm()">Submit</button>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
